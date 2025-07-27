@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-color: #18151c;
+}
+
+.cartas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.carta {
+    width: 260px;
+    height: 400px;
+    background: #23202b;
+    border: 4px solid #bfa14a;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.carta::before {
+    content: "";
+    position: absolute;
+    top: 14px; left: 14px; right: 14px; bottom: 14px;
+    border: 2px solid #bfa14a;
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.carta img {
+    width: 90%;
+    height: 60%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+    background: #18151c;
+}
+
+.carta h3 {
+    color: #3a7bd5;
+    font-size: 1.25em;
+    margin: 12px 0 4px 0;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    letter-spacing: 1px;
+}
+
+.carta p {
+    color: #e6e6e6;
+    font-size: 1em;
+    margin: 2px 0;
+    text-align: center;
+}
+
+.carta .numero {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    color: #b23a3a;
+    font-size: 2.1em;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.carta .numero.abajo {
+    top: unset;
+    bottom: 18px;
+    right: 18px;
+    left: unset;
+    color: #b23a3a;
+    transform: rotate(180deg);
+}
+
+.carta .rareza {
+    color: #bfa14a;
+    font-weight: bold;
+    margin-top: 2px;
+    font-size: 1em;
+}
+
+.carta button {
+    margin-top: 10px;
+    padding: 7px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #3a7bd5;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 1em;
+    margin-right: 6px;
+}
+
+.carta button:last-child {
+    background: #b23a3a;
+}
+
+.carta button:hover {
+    background: #1e4a7b;
+}
+
+#filtro form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#filtro input, #filtro select, #filtro button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+    font-size: 1em;
+}
+
+#filtro button {
+    background: #bfa14a;
+    color: #23202b;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#filtro button:hover {
+    background: #e6c75a;
+}
+
+footer {
+    text-align: center;
+    padding: 18px 0 8px 0;
+    color: #bfa14a;
+    background: rgba(24,21,28,0.7);
+    border-radius: 12px 12px 0 0;
+    margin-top: 40px;
+}
